@@ -104,19 +104,23 @@
             <ons-toolbar modifier="transparent"></ons-toolbar>
 
             <ons-list class="menu-list">
-                <ons-list-item class="menu-item" ng-click="menu.setMainPage('page1.html', {closeMenu: true})">
+                <ons-list-item class="menu-item" ng-click="menu.setMainPage('start.html', {closeMenu: true})">
                     <ons-icon icon="fa-plus"></ons-icon>
-                    New Post
+                    Add new eat!
                 </ons-list-item>
 
-                <ons-list-item class="menu-item" ng-click="menu.setMainPage('page2.html', {closeMenu: true})">
+                <ons-list-item class="menu-item" ng-click="menu.setMainPage('target.html', {closeMenu: true})">
                     <ons-icon icon="fa-bookmark"></ons-icon>
-                    Bookmark
+                    Target
                 </ons-list-item>
 
-                <ons-list-item class="menu-item" ng-click="menu.setMainPage('page1.html', {closeMenu: true})">
+                <ons-list-item class="menu-item" ng-click="menu.setMainPage('signup.html', {closeMenu: true})">
+                    <ons-icon icon="fa-facebook"></ons-icon>
+                    Connect with Facebook!
+                </ons-list-item>
+                <ons-list-item class="menu-item" ng-click="menu.setMainPage('history.html', {closeMenu: true})">
                     <ons-icon icon="fa-twitter"></ons-icon>
-                    Official Twitter
+                    History
                 </ons-list-item>
             </ons-list>
 
@@ -125,20 +129,49 @@
             <ons-list class="bottom-menu-list">
                 <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page2.html', {closeMenu: true})">
                     Settings
-                    <div class="notification menu-notification">3</div>
+                    <div class="notification menu-notification">10</div>
                 </ons-list-item>
 
-                <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page1.html', {closeMenu: true})">
+                <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('help.html', {closeMenu: true})">
                     Help
                 </ons-list-item>
 
                 <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page2.html', {closeMenu: true})">
-                    Send feedback
+                    Rate us
+                </ons-list-item>
+                
+                <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('about.html', {closeMenu: true})">
+                    About us
+                </ons-list-item>
+                <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('paypal.html', {closeMenu: true})">
+                    Donate
                 </ons-list-item>
             </ons-list>
         </ons-page>
     </ons-template>
 
+    <ons-template id="target.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button ng-click="menu.toggle()">
+                        <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">Target</div>
+            </ons-toolbar>
+
+            <ons-row style="margin-top: 100px; text-align: center;">
+                <ons-col>
+                    <ons-button modifier="light" ng-click="menu.toggleMenu()">
+                        Target
+                    </ons-button>
+                    <p style="color: #999; font-size: 13px;">This is your target for today</p>
+                </ons-col>
+            </ons-row>
+        </ons-page>
+    </ons-template>
+    
     <ons-template id="page1.html">
         <ons-page>
             <ons-toolbar>
@@ -147,7 +180,7 @@
                         <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
                     </ons-toolbar-button>
                 </div>
-                <div class="center">Page 1</div>
+                <div class="center">Eat! - your diet reminder</div>
             </ons-toolbar>
 
             <ons-row style="margin-top: 100px; text-align: center;">
@@ -161,7 +194,7 @@
         </ons-page>
     </ons-template>
 
-    <ons-template id="page2.html">
+    <ons-template id="start.html">
         <ons-page>
             <ons-toolbar>
                 <div class="left">
@@ -169,14 +202,129 @@
                         <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
                     </ons-toolbar-button>
                 </div>
-                <div class="center">Page 2</div>
+                <div class="center">Eat!</div>
             </ons-toolbar>
 
 
             <ons-row style="margin-top: 100px; text-align: center;">
                 <ons-col>
                     <ons-button modifier="light" ng-click="menu.toggleMenu()">
-                        Toggle Menu
+                        Statistics
+                    </ons-button>
+                </ons-col>
+            </ons-row>
+
+        </ons-page>
+    </ons-template>
+    
+    <ons-template id="notyfications.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button ng-click="menu.toggle()">
+                        <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">Notyfications</div>
+            </ons-toolbar>
+
+
+            <ons-row style="margin-top: 100px; text-align: center;">
+                <ons-col>
+                    <ons-button modifier="light" ng-click="menu.toggleMenu()">
+                        Notyfiaction!
+                    </ons-button>
+                </ons-col>
+            </ons-row>
+
+        </ons-page>
+    </ons-template>
+    
+    <ons-template id="history.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button ng-click="menu.toggle()">
+                        <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">History</div>
+            </ons-toolbar>
+
+
+            <ons-row style="margin-top: 100px; text-align: center;">
+                <ons-col>
+                    <ons-button modifier="light" ng-click="menu.toggleMenu()">
+                        History!
+                    </ons-button>
+                </ons-col>
+            </ons-row>
+
+        </ons-page>
+    </ons-template>
+    
+    <ons-template id="signup.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button ng-click="menu.toggle()">
+                        <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">Facebook</div>
+            </ons-toolbar>
+
+
+            <ons-row style="margin-top: 100px; text-align: center;">
+                <ons-col>
+                    <ons-button modifier="light" ng-click="menu.toggleMenu()">
+                        Facebook connect!
+                    </ons-button>
+                </ons-col>
+            </ons-row>
+
+        </ons-page>
+    </ons-template>
+    
+    <ons-template id="help.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button ng-click="menu.toggle()">
+                        <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">Help</div>
+            </ons-toolbar>
+
+
+            <ons-row style="margin-top: 100px; text-align: center;">
+                <ons-col>
+                    <ons-button modifier="light" ng-click="menu.toggleMenu()">
+                        Help!
+                    </ons-button>
+                </ons-col>
+            </ons-row>
+
+        </ons-page>
+    </ons-template>
+    
+    <ons-template id="about.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button ng-click="menu.toggle()">
+                        <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">About us</div>
+            </ons-toolbar>
+
+
+            <ons-row style="margin-top: 100px; text-align: center;">
+                <ons-col>
+                    <ons-button modifier="light" ng-click="menu.toggleMenu()">
+                        Who we are:
                     </ons-button>
                 </ons-col>
             </ons-row>
