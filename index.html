@@ -104,7 +104,7 @@
         <ons-page modifier="menu-page">
             <ons-toolbar modifier="transparent"></ons-toolbar>
 
-            <!--menu-->
+            <!--#################   menu   ##################-->
             <ons-list class="menu-list">
                 <ons-list-item class="menu-item" ng-click="menu.setMainPage('add.html', {closeMenu: true})">
                     <ons-icon icon="fa-plus"></ons-icon>
@@ -122,11 +122,6 @@
                 </ons-list-item>
 
 
-
-                <ons-list-item class="menu-item" ng-click="menu.setMainPage('history.html', {closeMenu: true})">
-                    <ons-icon icon="fa-twitter"></ons-icon>
-                    History
-                </ons-list-item>
             </ons-list>
 
             <br>
@@ -159,6 +154,7 @@
         </ons-page>
     </ons-template>
 
+    <!--###############  TARGET PAGE ####################-->
     <ons-template id="target.html">
         <ons-page>
             <ons-toolbar>
@@ -181,6 +177,7 @@
         </ons-page>
     </ons-template>
 
+    <!--###############  STATISTICS PAGE ####################-->
     <ons-template id="statistics.html">
         <ons-page>
             <ons-toolbar>
@@ -195,13 +192,20 @@
                 <div class="tab-bar tab-bar--top tab-bar--top-border">
                     <label class="tab-bar__item tab-bar--top-border__item">
                         <input type="radio" name="top-tab-bar-b" checked="checked">
-                        <button class="tab-bar__button tab-bar--top-border__button">
+                        <button class="tab-bar__button tab-bar--top-border__button" >
                             Daily
                         </button>
                     </label>
 
                     <label class="tab-bar__item tab-bar--top-border__item">
                         <input type="radio" name="top-tab-bar-b">
+                        <button class="tab-bar__button tab-bar--top-border__button">
+                            Weekly
+                        </button>
+                    </label>
+
+                    <label class="tab-bar__item tab-bar--top-border__item">
+                        <input type="radio" name="top-tab-bar-b" checked="checked">
                         <button class="tab-bar__button tab-bar--top-border__button">
                             Monthly
                         </button>
@@ -222,6 +226,7 @@
         </ons-page>
     </ons-template>
 
+    <!--###############  LOAD PAGE ####################-->
     <ons-template id="page1.html">
         <ons-page>
             <ons-toolbar>
@@ -244,18 +249,22 @@
         </ons-page>
     </ons-template>
 
+    <!--###############  ADD PAGE ####################-->
     <ons-template id="add.html">
         <ons-page>
             <ons-toolbar>
-                <div class="left">
+                <div class="left" style="width:10%">
                     <ons-toolbar-button ng-click="menu.toggleMenu()">
                         <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
                     </ons-toolbar-button>
                 </div>
-                <div class="center">
+               
+                 <div class="center" style="padding-top:6px; width:70%">
                     <input type="search" class="search-input" 
+                           
                            placeholder="Search your eat" >
                 </div>
+               
             </ons-toolbar>
 
 
@@ -293,28 +302,7 @@
         </ons-page>
     </ons-template>
 
-    <ons-template id="history.html">
-        <ons-page>
-            <ons-toolbar>
-                <div class="left">
-                    <ons-toolbar-button ng-click="menu.toggle()">
-                        <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
-                    </ons-toolbar-button>
-                </div>
-                <div class="center">History</div>
-            </ons-toolbar>
-
-
-            <ons-row style="margin-top: 100px; text-align: center;">
-                <ons-col>
-                    <ons-button modifier="light" ng-click="menu.toggleMenu()">
-                        History!
-                    </ons-button>
-                </ons-col>
-            </ons-row>
-
-        </ons-page>
-    </ons-template>
+  
 
     <ons-template id="signup.html">
         <ons-page>
