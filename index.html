@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!-- CSP support mode (required for Windows Universal apps): https://docs.angularjs.org/api/ng/directive/ngCsp -->
 <html lang="en" ng-app="app" ng-csp>
 <head>
@@ -10,11 +10,12 @@
     <script src="scripts/platformOverrides.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/onsen/js/onsenui.js"></script>
-
+    <script src="scripts/app.js"></script>
     <!-- CSS dependencies -->
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="lib/onsen/css/onsenui.css" />
     <link rel="stylesheet" href="lib/onsen/css/onsen-css-components-blue-basic-theme.css" />
+      <link rel="stylesheet" href="css/autocomplete.css">
     <link rel="stylesheet" href="css/index.css" />
 
     <!-- CSP support mode (required for Windows Universal apps) -->
@@ -82,16 +83,10 @@
                     Help
                 </ons-list-item>
 
-                <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page2.html', {closeMenu: true})">
-                    Rate us
-                </ons-list-item>
-
                 <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('about.html', {closeMenu: true})">
                     About us
                 </ons-list-item>
-                <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('paypal.html', {closeMenu: true})">
-                    Donate
-                </ons-list-item>
+                
             </ons-list>
         </ons-page>
     </ons-template>
@@ -107,12 +102,52 @@
                 </div>
                 <div class="center">plan</div>
             </ons-toolbar>
-
-            <div>niedziela 27
-            <br />
-            lunch toggle
-            <br />
-            dinner</div>
+<style>
+    button{
+    width: 100%;
+    }
+    button h4{
+        color: black;
+    }
+</style>
+            <div style="position:relative;width:100%;">
+                <button class="btn btn-primary"><h3>poniedzialek 27</h3></button>
+                <button><h4>breackfast toggle</h4></button>
+                <button><h4>lunch toggle</h4></button>
+                <button><h4>dinner toggle</h4></button>
+                <button class="btn btn-primary"><h3>wtorek 27</h3></button>
+                <button><h4>breackfast toggle</h4></button>
+                <button><h4>lunch toggle</h4></button>
+                <button><h4>dinner toggle</h4></button>
+                <button class="btn btn-primary"><h3>sroda 27</h3></button>
+                <button><h4>breackfast toggle</h4></button>
+                <button><h4>lunch toggle</h4></button>
+                <button><h4>dinner toggle</h4></button>
+                <button class="btn btn-primary"><h3>czwartek 27</h3></button>
+                <button><h4>breackfast toggle</h4></button>
+                <button><h4>lunch toggle</h4></button>
+                <button><h4>dinner toggle</h4></button>
+                <button class="btn btn-primary"><h3>piatek 27</h3></button>
+                <button><h4>breackfast toggle</h4></button>
+                <button><h4>lunch toggle</h4></button>
+                <button><h4>dinner toggle</h4></button>
+                <button class="btn btn-primary"><h3>sobota 27</h3></button>
+                <button><h4>breackfast toggle</h4></button>
+                <button><h4>lunch toggle</h4></button>
+                <button><h4>dinner toggle</h4></button>
+                <button class="btn btn-primary"><h3>niedziela 27</h3></button>
+                <button><h4>breackfast toggle</h4></button>
+                <button><h4>lunch toggle</h4></button>
+                <button><h4>dinner toggle</h4></button>
+                
+                <article ng-app="angularSlideables">
+    <h1 slide-toggle="#derp" >Click here for Hipster Ipsum.</h1>
+    <div id="derp" class="slideable">
+        <p>Bespoke aesthetic Bushwick craft beer. Qui aesthetic butcher, cardigan ex scenester Neutra American Apparel mumblecore.</p>
+        <p>Ethical adipisicing before they sold out, sriracha Thundercats cardigan dolor deep v placeat. Flannel tattooed meggings direct trade banh mi tousled sriracha. Portland VHS ut dreamcatcher. Butcher eu irony, Banksy leggings eiusmod Pinterest hashtag Etsy asymmetrical lo-fi Helvetica quis incididunt adipisicing. YOLO cliche minim mlkshk dreamcatcher excepteur, Austin McSweeney's.</p>
+        <p>Coded @ Kinfolk Studios in Williamsburg, Brooklyn, 2013.</p>
+    </div>
+            </div>
         </ons-page>
     </ons-template>
 
@@ -131,7 +166,7 @@
             <div class="tab-bar tab-bar--top tab-bar--top-border">
                 <label class="tab-bar__item tab-bar--top-border__item">
                     <input type="radio" name="top-tab-bar-b" checked="checked">
-                    <button class="tab-bar__button tab-bar--top-border__button">
+                    <button class="tab-bar__button tab-bar--top-border__button"  page="home.html">
                         Daily
                     </button>
                 </label>
@@ -151,17 +186,14 @@
                 </label>
 
             </div>
+<ons-template id="home.html">
+  <ons-toolbar>
+    <div class="center">Home</div>
+  </ons-toolbar>
 
+  <p style="padding-top: 100px; color: #999; text-align: center">Page Contents</p>
+</ons-template>
 
-
-            <ons-row style="margin-top: 100px; text-align: center;">
-                <ons-col>
-                    <ons-button modifier="light" ng-click="menu.toggleMenu()">
-                        statistics
-                    </ons-button>
-                    <p style="color: #999; font-size: 13px;">This is your statistics</p>
-                </ons-col>
-            </ons-row>
         </ons-page>
     </ons-template>
 
@@ -406,5 +438,7 @@
     </ons-page>
     </ons-page>
     </ons-template>
+    
+
 </body>
 </html>
