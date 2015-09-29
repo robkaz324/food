@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!-- CSP support mode (required for Windows Universal apps): https://docs.angularjs.org/api/ng/directive/ngCsp -->
 <html lang="en" ng-app="app" ng-csp>
 <head>
@@ -10,16 +10,12 @@
     <script src="scripts/platformOverrides.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/onsen/js/onsenui.js"></script>
-<script type="text/javascript" src="css/visualize.js"></script>
-    
+
     <!-- CSS dependencies -->
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="lib/onsen/css/onsenui.css" />
     <link rel="stylesheet" href="lib/onsen/css/onsen-css-components-blue-basic-theme.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <link href="css/basic.css" type="text/css" rel="stylesheet" />
-<link href="css/visualize.css" type="text/css" rel="stylesheet" />
-<link href="css/visualize-light.css" type="text/css" rel="stylesheet" />
 
     <!-- CSP support mode (required for Windows Universal apps) -->
     <link rel="stylesheet" href="lib/angular/angular-csp.css" />
@@ -86,10 +82,16 @@
                     Help
                 </ons-list-item>
 
+                <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page2.html', {closeMenu: true})">
+                    Rate us
+                </ons-list-item>
+
                 <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('about.html', {closeMenu: true})">
                     About us
                 </ons-list-item>
-                
+                <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('paypal.html', {closeMenu: true})">
+                    Donate
+                </ons-list-item>
             </ons-list>
         </ons-page>
     </ons-template>
@@ -105,52 +107,12 @@
                 </div>
                 <div class="center">plan</div>
             </ons-toolbar>
-<style>
-    button{
-    width: 100%;
-    }
-    button h4{
-        color: black;
-    }
-</style>
-            <div style="position:relative;width:100%;">
-                <button class="btn btn-primary"><h3>poniedzialek 27</h3></button>
-                <button><h4>breackfast toggle</h4></button>
-                <button><h4>lunch toggle</h4></button>
-                <button><h4>dinner toggle</h4></button>
-                <button class="btn btn-primary"><h3>wtorek 27</h3></button>
-                <button><h4>breackfast toggle</h4></button>
-                <button><h4>lunch toggle</h4></button>
-                <button><h4>dinner toggle</h4></button>
-                <button class="btn btn-primary"><h3>sroda 27</h3></button>
-                <button><h4>breackfast toggle</h4></button>
-                <button><h4>lunch toggle</h4></button>
-                <button><h4>dinner toggle</h4></button>
-                <button class="btn btn-primary"><h3>czwartek 27</h3></button>
-                <button><h4>breackfast toggle</h4></button>
-                <button><h4>lunch toggle</h4></button>
-                <button><h4>dinner toggle</h4></button>
-                <button class="btn btn-primary"><h3>piatek 27</h3></button>
-                <button><h4>breackfast toggle</h4></button>
-                <button><h4>lunch toggle</h4></button>
-                <button><h4>dinner toggle</h4></button>
-                <button class="btn btn-primary"><h3>sobota 27</h3></button>
-                <button><h4>breackfast toggle</h4></button>
-                <button><h4>lunch toggle</h4></button>
-                <button><h4>dinner toggle</h4></button>
-                <button class="btn btn-primary"><h3>niedziela 27</h3></button>
-                <button><h4>breackfast toggle</h4></button>
-                <button><h4>lunch toggle</h4></button>
-                <button><h4>dinner toggle</h4></button>
-                
-                <article ng-app="angularSlideables">
-    <h1 slide-toggle="#derp" >Click here for Hipster Ipsum.</h1>
-    <div id="derp" class="slideable">
-        <p>Bespoke aesthetic Bushwick craft beer. Qui aesthetic butcher, cardigan ex scenester Neutra American Apparel mumblecore.</p>
-        <p>Ethical adipisicing before they sold out, sriracha Thundercats cardigan dolor deep v placeat. Flannel tattooed meggings direct trade banh mi tousled sriracha. Portland VHS ut dreamcatcher. Butcher eu irony, Banksy leggings eiusmod Pinterest hashtag Etsy asymmetrical lo-fi Helvetica quis incididunt adipisicing. YOLO cliche minim mlkshk dreamcatcher excepteur, Austin McSweeney's.</p>
-        <p>Coded @ Kinfolk Studios in Williamsburg, Brooklyn, 2013.</p>
-    </div>
-            </div>
+
+            <div>niedziela 27
+            <br />
+            lunch toggle
+            <br />
+            dinner</div>
         </ons-page>
     </ons-template>
 
@@ -189,53 +151,43 @@
                 </label>
 
             </div>
-                <table style="width:80%;margin-top:10%;">
-	<caption style="margin-left:6%;display:none;">Status for last week</caption>
-	<thead>
-		<tr>
-			<td></td>
-			<th scope="col" style="padding:0px;">Status</th>
 
-		</tr>
-	</thead>
-	<tbody>
 
-		<tr>
-			<th scope="row" style="width:30px;">Monday</th>
-			<td style="color:red;">222541/20000</td>
-		</tr>
-		<tr>
-			<th scope="row">Tuesday</th>
-			<td style="color:green;">12541/20000</td>
-		  </tr>
-		  <tr>
-			<th scope="row">Wednesday</th>
-			<td>12541/20000</td>
-        </tr>
-        <tr>
-            <th scope="row">Thursday</th>
-            	<td>12541/20000</td>
-        </tr>
-        <tr>
-            <th scope="row">Friday</th>
-                <td>12541/20000</td>
-        </tr>
-        <tr>
-            <th scope="row">Saturday</th>
-                <td>12541/20000</td>
-        </tr>
-        <tr>
-            <th scope="row">Sunday</th>
-                <td>12541/20000</td>
-            
-		</tr>
-	</tbody>
-</table>
-           <img style="width:90%;height:30%;margin-left:5%;margin-top: 3%;" src="img/duzo.png">
-            
-            
+
+            <ons-row style="margin-top: 100px; text-align: center;">
+                <ons-col>
+                    <ons-button modifier="light" ng-click="menu.toggleMenu()">
+                        statistics
+                    </ons-button>
+                    <p style="color: #999; font-size: 13px;">This is your statistics</p>
+                </ons-col>
+            </ons-row>
         </ons-page>
     </ons-template>
+
+    <!--###############  LOAD PAGE ####################-->
+    <ons-template id="page1.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button ng-click="menu.toggle()">
+                        <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">Eat! - your diet reminder</div>
+            </ons-toolbar>
+
+            <ons-row style="margin-top: 100px; text-align: center;">
+                <ons-col>
+                    <ons-button modifier="light" ng-click="menu.toggleMenu()">
+                        Toggle Menu
+                    </ons-button>
+                    <p style="color: #999; font-size: 13px;">Click "Toggle Menu" to close/open menu,<br> You can also swipe the page left/right.</p>
+                </ons-col>
+            </ons-row>
+        </ons-page>
+    </ons-template>
+
     <!--###############  ADD PAGE ####################-->
     <ons-template id="add.html">
         <ons-page>
@@ -454,7 +406,5 @@
     </ons-page>
     </ons-page>
     </ons-template>
-    
-
 </body>
 </html>
