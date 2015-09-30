@@ -9,4 +9,9 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.example.package.name"
+      android:versionCode="430"
+      android:versionName="0.2.6">
+  </manifest>
 </widget>
